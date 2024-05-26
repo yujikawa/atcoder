@@ -24,8 +24,16 @@ test-suite = "{{ manifest_dir }}/testcases/{{ bin_alias }}.yml"
 src = '''
 use proconio::input;
 fn main() {
-    todo!();
+    input! {
+        n: usize,
+        mut a: [u8; n],
+    }
+
+    let mut result = true;
+    
+    println!("{}", result);
 }
+
 '''
 
 [template.new]
